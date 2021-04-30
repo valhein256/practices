@@ -37,6 +37,7 @@ devenv:
 		-e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) \
 		-e AWS_SESSION_TOKEN=$(AWS_SESSION_TOKEN) \
 		-e AWS_SECURITY_TOKE=$(AWS_SECURITY_TOKEN) \
+		-v ${PWD}/log:/var/log/app \
 		-v ${HOME}/.aws:/root/.aws \
 		-v ${PWD}:/opt/app \
 		--rm -it ${SERVICE} \
