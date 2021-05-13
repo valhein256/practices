@@ -12,4 +12,4 @@ __pycache__/
 linting/
 reports/
 config/
-
+bin/
