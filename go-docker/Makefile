@@ -4,11 +4,17 @@ PLATFORM := local
 
 .PHONY: build clean
 
-build:
-	@docker build --pull . --target bin \
-		--build-arg TAG=${STAGE} \
+build: clean
+	@echo "Start building..."
+	@DOCKER_BUILDKIT=1 docker build --pull . \
 		--platform ${PLATFORM} \
-		--output bin/ -t ${SERVICE}
+		--build-arg TAG=${STAGE} \
+		--target release --output bin/
+
+run:
+	@docker run \
+		-v ${PWD}/bin:/opt \
+		--rm -it golang:1-buster /bin/bash
 
 clean:
-	@rm -rf bin/*
+	@rm -rf bin
