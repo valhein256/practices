@@ -1,9 +1,9 @@
-//+build stg
+// +build stg
 
 package main
 
 const (
-	LICENSE_ID = "stg-license-id"
-	VENDOR_ID  = "stg-vendor-id"
-	HOST       = "stg"
+	LICENSE_ID = "STG-LICENSE-ID"
+	VENDOR_ID  = "STG-VENDOR-ID"
+	HOST       = "STG"
 )
