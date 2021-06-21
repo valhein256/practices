@@ -24,6 +24,12 @@ It would launch /bin/bash in golang:1-buster (ubuntu)
 $ > make devenv
 ```
 
+### Update package
+
+```shell
+$ > make update
+```
+
 ## Clean
 
 ```shell
