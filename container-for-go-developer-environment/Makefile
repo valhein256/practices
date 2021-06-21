@@ -2,7 +2,7 @@ SERVICE := batch
 STAGE := stg
 PLATFORM := local
 
-.PHONY: build clean
+.PHONY: build devenv clean
 
 build: clean
 	@echo "Start building..."
@@ -11,7 +11,7 @@ build: clean
 		--build-arg TAG=${STAGE} \
 		--target release --output bin/
 
-run:
+devenv:
 	@docker run \
 		-v ${PWD}/bin:/opt \
 		--rm -it golang:1-buster /bin/bash
